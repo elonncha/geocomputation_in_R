@@ -45,4 +45,4 @@ testr = raster(xmn = -100, xmx = 100, ymn = -100, ymx = 100, nrows = 200, ncol =
 spplot(testr)
 
 ##### Chapter 3 Attribute Data Operations
-# 
+# to be continue

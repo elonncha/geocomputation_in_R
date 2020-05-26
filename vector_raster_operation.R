@@ -1,5 +1,6 @@
 
-githubinstall::githubinstall()
+githubinstall::githubinstall('elonncha/geocomputation_in_R')
+library(geocomputation_in_R)
 tmaptools::palette_explorer()
 # a taste of leaflet
 popup = c("Robin", "Jakub", "Jannes")

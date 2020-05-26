@@ -1,6 +1,16 @@
+librarySetUp = function () {
+  library(leaflet)
+  library(sf)
+  library(tmap)
+  library(spdep)
+  library(raster)
+  library(spData)
+  library(spDataLarge)
+  library(RColorBrewer)
+  library(units)
+}
 
-githubinstall::githubinstall('elonncha/geocomputation_in_R')
-library(geocomputation_in_R)
+librarySetUp()
 tmaptools::palette_explorer()
 # a taste of leaflet
 popup = c("Robin", "Jakub", "Jannes")

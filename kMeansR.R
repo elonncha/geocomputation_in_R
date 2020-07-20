@@ -1,5 +1,7 @@
 library(tidyverse)
 library(ggplot2)
+library(plotly)
+library(htmltools)
 data = readr::read_tsv('/Users/eloncha/Documents/GitHub/Elon/python/testSet_kmeans.txt', col_names = FALSE)
 
 set.seed(6)
@@ -8,6 +10,8 @@ data['cluster'] = km['cluster']
 centers = as.data.frame(km['centers'])
 centers = centers %>% mutate(X1 = centers.X1, X2 = centers.X2)
 
-ggplot() + 
+km = ggplot() + 
   geom_point(data = data, aes(X1,X2, color = as.factor(cluster))) +
   geom_point(data = centers,aes(X1, X2), size = 5)
+
+p = ggplotly(p = km)
